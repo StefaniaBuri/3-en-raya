@@ -5,20 +5,117 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="tres-en-raya.css">
+    <link rel="stylesheet" href="tablet.css" media="screen and (min-width: 600px)">
+    <link rel="stylesheet" href="desktop.css" media="screen and (min-width: 870px)">
     <title>Tres en raya</title>
 </head>
 <body>
-    
-    <div class="contenedor-padre">
-        <h1><strong>Vamos a Jugar!!</strong></h1>
-                <div class="gametitle1">
-                    TRES-EN-RAYA
-                </div>
+    <header class="header">
+       
+        <div class="gametitle1">
+            TRES-EN-RAYA
+        </div>
+    </header>
 
+
+    <section class="section">
+        <aside class="section_aside">
+            <h2 class="section_aside-h2" id="player1_title">Jugador 1</h2>
+            <picture class="section_aside-picture">
+                <img class="emoji" src="./img/inicial.gif" alt="Inicial" id="img_player1" >
+            </picture>
+
+            <div class="section_div">
+                <p class="section_div-p">Puntuación:</p>
+                <p class="section_div-number-score" id="score1">0</p>
+            </div>
+        </aside>
+
+        <main class="section_main">
+            <div class="contenedor-padre">
+                <div id = "juego-info" class="juego-info"></div>
+
+                        <div class="tablero">
+
+                            <div class="cuadro"></div>
+                            <div class="cuadro"></div>
+                            <div class="cuadro"></div>
+                            <div class="cuadro"></div>
+                            <div class="cuadro"></div>
+                            <div class="cuadro"></div>
+                            <div class="cuadro"></div>
+                            <div class="cuadro"></div>
+                            <div class="cuadro"></div>
+
+                        </div>
+
+                        <div>
+                            <div id ="ranGame" class="button_start">Sortear Partida</div> 
+                            <div id ="nextGame" onclick="nextGame()" class="button_start">Volver a jugar</div> 
+                            <div id ="cleanButton" onclick="resetButton()" class="button_start">Reiniciar</div>     
+                            <!-- <button type="button" onclick="resetButton()" class="button_start" id="cleanButton" disabled>Reiniciar</button> -->
+                        </div>
+
+                </div>  
+            </div>
+
+        </main>
+
+
+
+<!-- jugadores puntaje version mobil -->
+        <div class="section_div-mobile">
+            <div class="player-mobile">
+                <p class="player-mobile-p">Jugador 1</p>
+                <p id="score_1m">0</p>
+            </div>
+
+            <div class="player-mobile">
+                <p class="player-mobile-p">Jugador 2</p>
+                <p id="score_2m">0</p>
+            </div>
+
+        </div>
+
+
+        <aside class="section_aside">
+            <h2 class="section_aside-h2" id="player2_title">Jugador 2</h2>
+            <picture class="section_aside-picture">
+                <img class="emoji" src="./img/inicial2.gif" alt="Inicial" id="img_player2">
+            </picture>
+
+            <div class="section_div">
+                <p class="section_div-p">Puntuación:</p>
+                <p class="section_div-number-score" id="score2">0</p>
+            </div>
+        </aside>
+
+    </section>
+
+    <!-- Modal venta - iniciar animacion -->
+
+    <div class="modal-container">
+        <div class="modal modal-close">
+            <img src="./img/modal.gif" alt="inicio partida">
+            <div class="modal-text">
+                <h1 id="playerInit"></h1>
+            </div>
+
+            <button class="button_start start_button"
+            type="button" id="start" style="font-size: medium;">
+            Comenzar
+            </button>
+        </div>
+    </div>
+
+
+
+    <!-- <div class="contenedor-padre">
+       
                 <div id="contador" class="contador">
                     <div>
                     <label for="partidas">Partidas Jugadas:</label>
-                    <input id="partidas" placeholder="" type="number" name="partidas"/>
+                    <input id="partidas" placeholder="" name="partidas"/>
                     </div>
 
                     <div>
@@ -60,8 +157,11 @@
                 <div id ="reset" class="reset">Reset Resultados</div>     
                 </div>
 
-    </div>         
+    </div>          -->
 
-    <script src=""tres-en-raya".js"></script>
+    <!-- <script src="tres-en-raya.js"></script> -->
+    <script type="module" src="tres-en-raya.js">
+
+    </script>
 </body>
 </html>
